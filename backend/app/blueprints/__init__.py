@@ -1,0 +1,3 @@
+"""
+ShadowTrap AI - Blueprints Package
+"""

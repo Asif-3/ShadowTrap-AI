@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════
+# ShadowTrap AI X — Python Dependencies
+# ═══════════════════════════════════════════════════════════
+
+# Flask & Extensions
+Flask==3.1.0
+flask-cors==5.0.1
+flask-jwt-extended==4.7.1
+flask-socketio==5.5.1
+eventlet==0.39.1
+
+# MongoDB
+pymongo==4.11.3
+
+# Authentication
+bcrypt==4.2.1
+
+# Task Queue (Optional — falls back to sync if unavailable)
+celery==5.4.0
+redis==5.2.1
+
+# AI / ML — Core
+scikit-learn==1.6.1
+numpy==2.2.3
+pandas==2.2.3
+joblib==1.4.2
+scipy==1.15.2
+xgboost==2.1.4
+
+# AI / ML — Deep Learning (Optional — falls back to sklearn)
+# Uncomment if GPU/large install is acceptable:
+# torch==2.6.0
+# sentence-transformers==3.4.1
+
+# AI / ML — Explainability
+shap==0.46.0
+
+# Graph Analysis
+networkx==3.4.2
+
+# LLM (llama.cpp via HTTP — uses requests)
+requests==2.32.3
+
+# Report Generation
+reportlab==4.2.5
+
+# Utilities
+python-dotenv==1.0.1
+python-dateutil==2.9.0
+watchdog==6.0.0
+
+# Logging
+colorlog==6.9.0

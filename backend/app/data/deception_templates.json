@@ -1,0 +1,44 @@
+{
+  "fake_files": {
+    "credential_theft": [
+      {"path": "/root/.aws/credentials", "content": "[default]\naws_access_key_id = AKIAIOSFODNN7EXAMPLE\naws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"},
+      {"path": "/home/admin/.ssh/id_rsa", "content": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA... (FAKE KEY)\n-----END RSA PRIVATE KEY-----"},
+      {"path": "/var/www/html/.env", "content": "DB_HOST=internal-db.corp.local\nDB_USER=admin\nDB_PASS=Str0ngP@ss2024!\nAPI_KEY=sk-fake-api-key-for-deception"},
+      {"path": "/root/.mysql_history", "content": "SELECT * FROM users;\nUPDATE users SET role='admin' WHERE id=1;\nSHOW DATABASES;"},
+      {"path": "/etc/shadow.bak", "content": "root:$6$fakehash...::0:99999:7:::\nadmin:$6$fakehash...::0:99999:7:::"}
+    ],
+    "reconnaissance": [
+      {"path": "/etc/network/interfaces", "content": "auto eth0\niface eth0 inet static\naddress 10.0.1.50\nnetmask 255.255.255.0\ngateway 10.0.1.1"},
+      {"path": "/var/log/auth.log", "content": "Jul 20 08:15:22 server sshd[1234]: Accepted password for admin from 10.0.1.100\nJul 20 08:16:00 server sshd[1235]: Accepted publickey for deploy from 10.0.1.200"},
+      {"path": "/opt/deploy/servers.txt", "content": "web01.corp.local 10.0.1.10\ndb01.corp.local 10.0.1.20\napi01.corp.local 10.0.1.30\nredis01.corp.local 10.0.1.40"}
+    ],
+    "persistence": [
+      {"path": "/var/spool/cron/crontabs/root", "content": "*/5 * * * * /opt/monitoring/check_health.sh\n0 2 * * * /opt/backup/run_backup.sh"},
+      {"path": "/etc/systemd/system/app-monitor.service", "content": "[Unit]\nDescription=App Health Monitor\n[Service]\nExecStart=/opt/monitor/run.sh\nRestart=always\n[Install]\nWantedBy=multi-user.target"}
+    ],
+    "data_theft": [
+      {"path": "/var/backups/db_dump_2024.sql.gz", "content": "(binary fake data)"},
+      {"path": "/home/admin/Documents/financial_report_Q3.xlsx", "content": "(binary fake data)"},
+      {"path": "/opt/app/data/customers.csv", "content": "id,name,email,phone\n1,John Doe,john@example.com,555-0100\n2,Jane Smith,jane@example.com,555-0101"}
+    ]
+  },
+  "fake_services": [
+    {"name": "mysql", "port": 3306, "banner": "5.7.42-0ubuntu0.18.04.1 (Ubuntu)"},
+    {"name": "redis", "port": 6379, "banner": "Redis server v=6.2.6 sha=00000000:0 malloc=jemalloc-5.1.0 bits=64"},
+    {"name": "elasticsearch", "port": 9200, "banner": "{\"name\": \"prod-es-01\", \"cluster_name\": \"production\", \"version\": {\"number\": \"7.17.0\"}}"},
+    {"name": "mongodb", "port": 27017, "banner": "MongoDB shell version v4.4.6"},
+    {"name": "postgresql", "port": 5432, "banner": "PostgreSQL 14.5 on x86_64-pc-linux-gnu"}
+  ],
+  "fake_credentials": [
+    {"service": "MySQL", "username": "root", "password": "M@sterDB2024!"},
+    {"service": "Redis", "username": "", "password": "r3d1s_s3cret"},
+    {"service": "SSH", "username": "deploy", "password": "D3pl0y@utom4t10n"},
+    {"service": "FTP", "username": "backup", "password": "B4ckup$2024"},
+    {"service": "Admin Panel", "username": "admin", "password": "Adm1n#P@nel!"}
+  ],
+  "fake_databases": [
+    {"name": "production_db", "tables": ["users", "orders", "payments", "products", "sessions"]},
+    {"name": "analytics_db", "tables": ["events", "page_views", "conversions", "reports"]},
+    {"name": "hr_system", "tables": ["employees", "salaries", "departments", "reviews"]}
+  ]
+}
